@@ -38,6 +38,13 @@
     border-color: var(--accent-color);
     outline: none;
   }
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    top: 10px;
+    border: transparent;
+  }
 }
 .btn-close-icon {
   position: absolute;

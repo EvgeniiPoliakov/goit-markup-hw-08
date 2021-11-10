@@ -18,7 +18,7 @@
             <nav class="header__navigation">
                 <a href="" class="logo header__logo">Web<span class="header__logocolor">Studio</span></a>
                 <ul class="site-nav">
-                    <li class="site-nav__item"><a href="" class="site-nav__link link current">Студия</a></li>
+                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link link current">Студия</a></li>
                     <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
                 </ul>
@@ -31,6 +31,45 @@
                     <use href="./images/icons.svg/sprite.svg#icon-smartphone"></use>
                 </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button class="menu-open-btn" data-menu-open>
+                <svg class="btn-menu-icon" width="24" height="16">
+                    <use href="./images/icons.svg/sprite.svg#icon-menu-open-btn"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="backdrop is-hidden" data-menu>
+            <div class="mobile-menu">
+                <button type="button" class="btn-close" data-menu-close>
+                    <svg class="btn-close-icon" width="24" height="24">
+                        <use href="./images/icons.svg/sprite.svg#icon-close-btn"></use>
+                    </svg>
+                </button>
+                <div class="menu">
+                    <div class="mobile-nav">
+                        <ul class="mobile-nav list">
+                            <li class="mobile-nav-item"><a href="./index.html" class="mobile-nav-link link current">Студия</a></li>
+                            <li class="mobile-nav-item"><a href="./portfolio.html" class="mobile-nav-link link ">Портфолио</a>
+                            </li>
+                            <li class="mobile-nav-item"><a href="" class="mobile-nav-link link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-content">
+                        <ul class="mobile-content list">
+                            <li class="mobile-content-item"><a href="" class="mobile-content-tell link">+38 096 111 11 11</a></li>
+                            <li class="mobile-content-item"><a href="" class="mobile-content-mail link">info@devstudio.com</a></li>
+                        </ul>
+                        <ul class="mobile-social list">
+                            <li class="social-menu"><a href="" class="mobile-social link">Instagram</a></li>
+                            <li class="social-menu"><a href="" class="mobile-social link">Twitter</a>
+                            </li>
+                            <li class="social-menu"><a href="" class=mobile-social link">Facebook</a>
+                            </li>
+                            <li class="social-menu"><a href="" class="mobile-social link">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -89,19 +128,28 @@
                 <ul class="aboutus">
                     <li class="aboutus__item">
                         <div class="aboutus__tittle">
-                            <img src="./images/about/aboutimg1.jpg" alt="Делаем HTML скелет сайта" width="370">
+                            <picture>
+                                <source srcset="./images/about/aboutimg1.jpg 1x, ./images/about/aboutimg1-2.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/about/aboutimg1.jpg" alt="Делаем HTML скелет сайта" width="370">
+                            </picture>
                             <h3 class="aboutus__tittle-text">Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="aboutus__item">
                         <div class="aboutus__tittle">
-                            <img src="./images/about/aboutimg2.jpg" alt="Задаем стилизацию CSS" width="370">
+                            <picture>
+                                <source srcset="./images/about/aboutimg2.jpg 1x, ./images/about/aboutimg2-2.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/about/aboutimg2.jpg" alt="Задаем стилизацию CSS" width="370">
+                            </picture>
                             <h3 class="aboutus__tittle-text">Мобильные приложения</h3>
                         </div>
                     </li>
                     <li class="aboutus__item">
                         <div class="aboutus__tittle">
-                            <img src="./images/about/aboutimg3.jpg" alt="Адаптируем функционал под пользователя" width="370">
+                            <picture>
+                                <source srcset="./images/about/aboutimg3.jpg 1x, ./images/about/aboutimg3-2.jpg 2x" media="(min-width: 1200px)">
+                                <img src="./images/about/aboutimg3.jpg" alt="Адаптируем функционал под пользователя" width="370">
+                            </picture>
                             <h3 class="aboutus__tittle-text">Дизайнерские решения</h3>
                         </div>
                     </li>
@@ -418,7 +466,6 @@
                         </svg>
                     </span>
                 </div>
-            
                 <div class="form-field">
                     <label for="tel">Телефон</label>
                     <span class="input-wrapper">
@@ -428,7 +475,6 @@
                         </svg>
                     </span>
                 </div>
-
                 <div class="form-field">
                     <label for="mail">Почта</label>
                     <span class="input-wrapper">
@@ -452,11 +498,11 @@
                     </span>Соглашаюсь с рассылкой и принимаю&#160;<a href=""
                         class="checkbox-rule">Условия договора</a></label>
                 </div>
-
                 <button type="submit" class="button">Отправить</button>
             </form>
         </div> 
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
